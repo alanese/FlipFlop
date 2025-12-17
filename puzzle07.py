@@ -26,7 +26,7 @@ shortest_path_p3_sum: int = 0
 with open("input-07.txt") as f:
     for line in f:
         coords: list[int] = [int(x) for x in line.split()]
-        shortest_path_p1:int = binom(coords[0] + coords[1] - 2, coords[0] - 1)
+        shortest_path_p1: int = binom(coords[0] + coords[1] - 2, coords[0] - 1)
         shortest_path_p1_sum += shortest_path_p1
         shortest_path_p2: int = multinom(coords[0] + coords[1] + coords[0] - 3, [coords[0]-1, coords[1]-1, coords[0]-1])
         shortest_path_p2_sum += shortest_path_p2
